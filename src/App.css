@@ -27,6 +27,13 @@
   font-size: large;
 }
 
+.card-container {
+  display: flex;
+  margin: auto;
+}
+.card {
+  margin: auto;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
