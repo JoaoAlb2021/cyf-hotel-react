@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import Row from "./Row";
 
 function SearchResults(props) {
   return (
@@ -13,22 +14,12 @@ function SearchResults(props) {
           <th scoope="col">Room Id</th>
           <th scoope="col">Check In Date</th>
           <th scoope="col">Check Out Date</th>
+          <th scoope="col">Night</th>
         </tr>
       </thead>
       <tbody>
-        {props.result.map(data => {
-          return (
-            <tr>
-              <td>{data.id}</td>
-              <td>{data.title}</td>
-              <td>{data.firstName}</td>
-              <td>{data.surname}</td>
-              <td>{data.email}</td>
-              <td>{data.roomId}</td>
-              <td>{data.checkInDate}</td>
-              <td>{data.checkOutDate}</td>
-            </tr>
-          );
+        {props.result.map(item => {
+          return <Row data={item} />;
         })}
       </tbody>
     </table>

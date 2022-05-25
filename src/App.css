@@ -62,3 +62,14 @@ tr {
 .card {
   width: 18rem;
 }
+
+.restaurant-style {
+  text-align: center;
+}
+.restaurant-style ul {
+  list-style: none;
+}
+
+.select-color {
+  background-color: rgb(150, 170, 244);
+}
