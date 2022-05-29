@@ -73,3 +73,9 @@ tr {
 .select-color {
   background-color: rgb(150, 170, 244);
 }
+
+.errorMessage {
+  color: white;
+  background-color: red;
+  text-align: center;
+}

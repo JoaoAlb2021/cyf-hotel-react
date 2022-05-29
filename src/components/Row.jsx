@@ -1,12 +1,6 @@
 import React, { useState } from "react";
-import moment from "moment";
 
 const Row = props => {
-  const nights = (a, b) => {
-    const date1 = moment(a);
-    const date2 = moment(b);
-    return date2.diff(date1, "days");
-  };
   const [select, setSelect] = useState(false);
   return (
     <tr
@@ -21,7 +15,12 @@ const Row = props => {
       <td>{props.data.roomId}</td>
       <td>{props.data.checkInDate}</td>
       <td>{props.data.checkOutDate}</td>
-      <td>{nights(props.data.checkInDate, props.data.checkOutDate)}</td>
+      <td>{props.diff}</td>
+      <td>
+        <button onClick={() => props.setSelectedId(props.data.id)}>
+          Show Profile
+        </button>
+      </td>
     </tr>
   );
 };
